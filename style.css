@@ -154,6 +154,11 @@ input[type="radio"]#long-break:checked ~ .mode-background {
 }
 
 @media only screen and (max-width: 600px) {
+
+  body {
+    overflow: auto
+  };
+
   .spotify-container {
     position: static;
     width: 100%;
