@@ -85,6 +85,17 @@ document.getElementById("endBtn").addEventListener("click", () => {
   displayTime(timeRemaining);
 });
 
+document.getElementById('toggleSpotify').addEventListener('click', function () {
+  const spotify = document.querySelector('.spotify');
+  if (spotify.style.maxHeight) {
+    spotify.style.maxHeight = null;
+    this.textContent = "–";
+  } else {
+    spotify.style.maxHeight = "0";
+    this.textContent = "+";
+  }
+});
+
 // Initialize timer display and button states
 displayTime(timeRemaining);
 updateButtonStates();

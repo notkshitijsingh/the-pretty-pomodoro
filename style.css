@@ -127,8 +127,48 @@ input[type="radio"]#long-break:checked ~ .mode-background {
   opacity: 0.6;
 }
 
+.spotify-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.spotify {
+  display: block;
+  transition: max-height 0.3s ease;
+}
+
+.toggle-btn {
+  background-color: var(--accent);
+  color: var(--background);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
 @media only screen and (max-width: 600px) {
+  .spotify-container {
+    position: static;
+    width: 100%;
+    align-items: center;
+  }
+
+  .spotify {
+    width: 100%;
+  }
+  
   .mode-label {
     margin-left: -6px;
+  }
+
+  .toggle-btn {
+    display: none;
   }
 }
